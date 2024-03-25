@@ -1,11 +1,22 @@
 import functools
 from datetime import datetime
 
-'00:00:20'
+
 def logger(tm, cnt):
     def decorator(func):
+        '''
+        decorating function
+        :param func: function to be decorated
+        :return: converted function
+        '''
         @functools.wraps(func)
         def wrapped(*args, **kwargs):
+            '''
+            converted function
+            :param args: parameters of the function to be decorated
+            :param kwargs: default parameters  of the function to be decorated
+            :return: new result of the decorated function
+            '''
             time_first = datetime.now()
             result = func(*args, **kwargs)
             time_last = datetime.now()

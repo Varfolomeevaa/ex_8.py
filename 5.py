@@ -6,6 +6,12 @@ suit = list(filter(lambda x: x % multiple == 0 and x ** 0.5 == int(x ** 0.5), ra
 
 
 def multiply(first, second):
+    '''
+    function for multiplying numbers
+    :param first: first multiplier
+    :param second: second multiplier
+    :return:
+    '''
     return first * second
 
 
